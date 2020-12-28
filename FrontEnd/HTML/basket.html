@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Orinoco - Basket</title>
+        <meta name="description" content="Bienvenue sur votre panier">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="https://kit.fontawesome.com/e517cdf63c.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+        
+
+    </head>
+    <body class="bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="../index.html">
+              <h1>Orinoco</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../index.html">Accueil
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">A propos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="basket.html"><i class="fa fa-shopping-cart"
+                      aria-hidden="true"></i>&ensp;<span id="articlepluriel"></span> <span id="affichagePanier"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <main class="mt-5 pt-5 mb-1 panier" >
+          <section id="productsContainer" class="container mb-4 border rounded">           
+            <div class="etatPanier"></div><hr>
+            <div class="row soldeEtArticle">
+              <div id="corpsPanier">
+              </div>
+              <div id="prixTotal" class="prixTotal font-weight-bold col-lg-4 d-flex p-1 justify-content-end flex-column">
+                <div class="mb-5">
+                  <div class="text-right d-flex justify-content-between">
+                    <h5>Sous-Total</h5>
+                    <p id="prixSousTotal"></p>
+                  </div>
+                  <hr>
+                  <div class="text-right d-flex justify-content-between">
+                    <h5> Total </h5>
+                    <p id="Total"></p>
+                  </div>     
+                </div>
+              </div>
+            </div>
+          </section>  
+          <section class="container formulaire">
+            <div class="row mb-3">
+              <form class="col-lg-12 border rounded pt-3">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="nom">Nom </label>
+                    <input type="text" name="lastname" id="nom"  class="form-control"  placeholder="Nom" required="required"><span id="formatInfosNom"></span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="prenom">Prénom </label>
+                  <input type="text" name="firstname" id="prenom"  class="form-control"  placeholder="Prénom" required="required"><span id="formatInfosPrenom"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email </label>
+                  <input type="email" name="email" id="email" class="form-control"  placeholder="orinoco@gmail.com" required="required"><span id="formatinfosMail"></span>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="adresse">Adresse </label>
+                    <input type="text" name="adresse" id="adresse" class="form-control"  placeholder="337 Rue du Damier" required="required"><span id="formatInfosAdresse"></span>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="ville">Ville </label>
+                    <input type="text" name="city" id="ville" class="form-control"  placeholder="Paris" required="required"><span id="formatInfosVille"></span>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button type="submit" id="valider" class="btn btn-primary mb-3">
+                    Valider la commande
+                  </button>
+                </div>
+              </form>
+            </div >
+          </section>
+        </main>
+        <footer class="py-4 bg-dark ">
+            <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Orinoco</p>
+            </div>
+        </footer>
+        <script src="../bootstrap/jquery/jquery.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../JS/basket.js"></script> 
+    </body>
+</html>
